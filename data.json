@@ -1,4 +1,31 @@
 {
     "temp": "2",
-    "weather_status": "raining"
+    "weather_status": "raining",
+    "departures_skyttens": [{
+            "bus": "809",
+            "time": "08:10"
+        },
+        {
+            "bus": "807",
+            "time": "08:11"
+        },
+        {
+            "bus": "832",
+            "time": "08:13"
+        }
+    ],
+    "departures_brandbgergen": [{
+            "bus": "809",
+            "time": "08:15"
+        },
+        {
+            "bus": "807",
+            "time": "08:16"
+        },
+        {
+            "bus": "832",
+            "time": "08:17"
+        }
+    ]
+
 }
