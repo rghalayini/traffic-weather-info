@@ -32,6 +32,12 @@ body {
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .bus-data-container {
+        display: flex;
+    }
+}
+
 .bus-line-container {
     display: flex;
     justify-content: center;
@@ -45,13 +51,6 @@ body {
 
 @media only screen and (min-width: 600px) {
     .bus-line-wrapper {
-        width: 50%;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .bus-line-container {
         width: 50%;
     }
 }
