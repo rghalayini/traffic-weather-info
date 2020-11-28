@@ -4,12 +4,11 @@ $(document).ready(function() {
 
         $('#weather-status').attr("src", "https://openweathermap.org/img/wn/"+data.weather_icon+"@4x.png");
 
-        //we want just three buses to appear (can be adjusted to more)
-        for (i = 0; i < 3; i++) {
+        for (let i = 0; i < data.departures_skyttens.length; i++) {
             let obj = data.departures_skyttens[i];
             $("#SkyttensGata-list").append(`<li><span class="bus-number" >${obj.bus}</span> <span class="bus-time">${obj.time}</span></li>`);
         }
-        for (i = 0; i < 3; i++) {
+        for (let i = 0; i < data.departures_brandbergen.length; i++) {
             let obj = data.departures_brandbergen[i];
             $("#BrandbergenCentrum-list").append(`<li><span class="bus-number" >${obj.bus}</span> <span class="bus-time">${obj.time}</span></li>`);
         }
