@@ -1,0 +1,57 @@
+body {
+  background-image: url('img/winter.jpg');
+}
+
+.main-container {
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+
+.weather-data-container {
+    text-align: center;
+    display: block;
+}
+
+.weather-status-container {
+    display: block;
+}
+
+.temperature-header {
+    font-size: 4em;
+}
+
+.bus-data-container {
+    margin-top: 1em;
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    .bus-data-container {
+        display: flex;
+    }
+}
+
+.bus-line-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.bus-line-wrapper {
+    padding: 1em;
+    background-color: lightgreen;
+}
+
+@media only screen and (min-width: 600px) {
+    .bus-line-wrapper {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .bus-line-container {
+        width: 50%;
+    }
+}
