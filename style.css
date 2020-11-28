@@ -11,6 +11,12 @@ body {
 .weather-data-container {
     text-align: center;
     display: block;
+    background-color: lightgreen;
+}
+
+@media only screen and (min-width: 600px) {
+    .weather-data-container {
+    }
 }
 
 .weather-status-container {
