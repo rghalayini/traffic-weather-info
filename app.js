@@ -1,10 +1,9 @@
 $(document).ready(function() {
-
-
     $.get("/data.php", function(data, status) {
-        console.log("Data: " + data + "\nStatus: " + status);
-        $('#temperature-status').html(data.temp);
-        $('#weather-status').html(data.weather_main);
+        $('#temperature-status').html(Math.round(data.temp));
+
+
+        $('#weather-status').attr("src", "https://openweathermap.org/img/wn/"+data.weather_icon+"@4x.png");
 
         //we want just three buses to appear (can be adjusted to more)
         for (i = 0; i < 3; i++) {
