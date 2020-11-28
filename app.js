@@ -17,7 +17,16 @@ $(document).ready(function() {
         }
     });
 
-
-
+    var date = new Date();
+    var month = date.getMonth();
+    if (month >= 2 && month <= 4) {
+        $('body').css('background-image', "url('img/spring.jpg')");
+    }
+    if (month >= 5 && month <= 7) {
+        $('body').css('background-image', "url('img/summer.jpg')");
+    }
+    if (month >= 8 && month <= 10) {
+        $('body').css('background-image', "url('img/fall.jpg')");
+    }
 
 });
