@@ -2,7 +2,6 @@ $(document).ready(function() {
     $.get("/data.php", function(data, status) {
         $('#temperature-status').html(Math.round(data.temp));
 
-
         $('#weather-status').attr("src", "https://openweathermap.org/img/wn/"+data.weather_icon+"@4x.png");
 
         //we want just three buses to appear (can be adjusted to more)
