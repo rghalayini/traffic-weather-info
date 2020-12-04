@@ -1,5 +1,9 @@
 <?php
-require 'variables.php';
+
+// We use environment variables instead. We need to do this if we want
+// to deploy on e.g. heroku.
+$APIKey = $_ENV["OPEN_WEATHER_MAP_API_KEY"];
+$ResRobotStolptidtabeller2APIKey = $_ENV["RESROBOT_STT2_API_KEY"];
 
 $url='https://api.openweathermap.org/data/2.5/weather?q=Haninge&appid='.$APIkey.'&units=metric';
 
