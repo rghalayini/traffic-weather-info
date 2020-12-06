@@ -1,68 +1,212 @@
-body {
-  background-image: url('img/winter.jpg');
-}
+/* body {
+    background-image: url('img/winter.jpg');
+} */
 
-.main-container {
+
+/* .main-container {
     width: 80%;
     margin: auto;
     padding: 1em;
-}
+} */
 
-.weather-data-container {
+
+/* .weather-data-container {
     text-align: center;
     display: block;
     background-color: lightgreen;
+} */
+
+
+/* @media only screen and (min-width: 600px) {
+    .weather-data-container {}
+} */
+
+
+/* .weather-status-container {
+    display: block;
+} */
+
+
+/* ----------- BODY style CSS ------------ */
+
+body {
+    background-color: rgb(7, 18, 35);
+    color: white;
+    font-family: Helvetica, ;
+    /* evening rgb(7, 18, 35)
+    morning rgb(60, 120, 200) */
 }
 
-@media only screen and (min-width: 600px) {
-    .weather-data-container {
-    }
+
+/* ----------- weather style CSS ------------ */
+
+.column {
+    display: block;
+    /* flex: 50%; */
+    padding-left: 100px;
+    /* padding-top: 20px; */
+}
+
+.temperature-Celsius {
+    padding-top: 50px;
+    display: grid;
+}
+
+.temperature-Celsius a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.temperature-Celsius a:hover {
+    transform: scale(1.2);
+    cursor: pointer
+}
+
+
+/* #celsiusTemp,
+#FahrTemp {
+    position: absolute;
+    left: 50px;
+} */
+
+.temperature-header {
+    font-size: 12em;
+}
+
+.weather-location {
+    font-weight: bold;
+    font-size: 2em;
+    padding-top: 50px;
+    height: 70px;
+}
+
+.weather-date {
+    padding-top: 30px;
+    font-weight: lighter;
+}
+
+.weather-image img {
+    width: 300px;
+    height: 254px;
 }
 
 .weather-status-container {
-    display: block;
+    padding-top: 25px;
+    font-weight: lighter;
+    font-size: 1.5em;
+    text-transform: capitalize;
 }
 
-.temperature-header {
-    font-size: 4em;
+
+/* ------------ WEATHER FORECAST  ---------------*/
+
+.weather-forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5em;
+    column-gap: 0.75em;
+    row-gap: 0.75em;
+}
+
+.weather-forecast-container .column {
+    width: 10em;
+    display: ;
+    /* box-shadow: 0 0 0 3px #cde1f8; */
+    padding: 0.4em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+ion-icon {
+    color: white;
+    font-size: 40px;
+    --ionicon-stroke-width: 16px;
+}
+
+.weather-forecast-container .column:hover {
+    transform: scale(1.125);
+    /* background-color: #0078ff;
+    color: #fff; */
+    transition: all 500ms ease;
+}
+
+
+/* ------------ LINE ---------------*/
+
+hr {
+    border: none;
+    height: 2px;
+    color: black;
+    background-color: black;
+}
+
+
+/* ------------ BUS STYLE ---------------*/
+
+.bus-time-headline h1 {
+    font-weight: bold;
+    font-size: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
 }
 
 .bus-data-container {
-    margin-top: 1em;
     display: block;
+    margin-top: 2em;
+    margin-left: 4em;
+    width: 74.5em;
+    /* background-color: rgb(159, 186, 245); */
+    color: white;
+}
+
+.bus-line-wrapper h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
 }
 
 @media only screen and (min-width: 600px) {
     .bus-data-container {
         display: flex;
+        flex-wrap: wrap;
     }
 }
 
-@media only screen and (min-width: 600px) {
+
+/* @media only screen and (min-width: 600px) {
     .bus-data-container {
         display: flex;
     }
-}
+} */
 
 .bus-line-container {
-    display: flex;
+    display: block;
     justify-content: center;
-    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 20em;
+    margin: 1.5em;
+    padding: 2em;
 }
 
-.bus-line-wrapper {
-    padding: 1em;
-    background-color: lightgreen;
-}
 
-@media only screen and (min-width: 600px) {
+/* .bus-line-wrapper {
+    padding: 2em;
+} */
+
+
+/* @media only screen and (min-width: 600px) {
     .bus-line-wrapper {
-        width: 50%;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 600px) {
     .bus-line-container {
-        width: 50%;
+        width: 100%;
     }
-}
+} */
