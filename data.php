@@ -1,5 +1,16 @@
 <?php
-require 'variables.php';
+
+// We use environment variables instead when we run on heroku since they use that.
+// It would be nice to use environment variables when developing locally as well
+// (e.g. using a .env file) but that might be a bit too complex
+// So if there is an environment variable LIVE and it set to true, we know we
+// code running is deployed on heroku, and then we will use environment variables instead
+if (isset($_ENV["LIVE"]) && $_ENV["LIVE"] == "TRUE") {
+    $APIkey = $_ENV["OPEN_WEATHER_MAP_API_KEY"];
+    $ResRobotStolptidtabeller2APIKey = $_ENV["RESROBOT_STT2_API_KEY"];
+} else {
+    require 'variables.php';
+}
 
 $url='https://api.openweathermap.org/data/2.5/weather?q=Haninge&appid='.$APIkey.'&units=metric';
 
