@@ -2,8 +2,10 @@ $(document).ready(function() {
     $.get("/traffic-weather-info/data.php", function(data, status) {
         $('#temperature-status').html(Math.round(data.temp));
         $(".weather-status-container").append(`<p>${data.weather_description}</p>`);
-        // document.write(data.weather_description);
+
         //$('#weather-status').attr("src", "https://openweathermap.org/img/wn/" + data.weather_icon + "@4x.png");
+        $('#tempDay1').append(`<p>${data.day1_temp}</p>`);
+
 
         for (let i = 0; i < data.departures_skyttens.length; i++) {
             let obj = data.departures_skyttens[i];
@@ -14,7 +16,6 @@ $(document).ready(function() {
             $("#BrandbergenCentrum-list").append(`<li><span class="bus-number" >${obj.bus}:&nbsp; &nbsp; &nbsp;</span> <span class="bus-time">${obj.time}</span></li>`);
         }
     });
-
     //change background image according to date
     // var date = new Date();
     // var month = date.getMonth();
@@ -30,7 +31,7 @@ $(document).ready(function() {
 
 
 
-    //----------change color according to time-----------//
+    //----------change background color according to time of day-----------//
 
     var time = (new Date()).getHours();
 
@@ -41,6 +42,7 @@ $(document).ready(function() {
             // $('body').css("color", "black")
             // $('.bus-data-container').css("background-color", "rgb(190, 200, 221)");
     };
+
     //----------change temp from C to F -----------//
 
     $('#FahrTemp').on('click', function() {

@@ -1,6 +1,14 @@
 {
     "temp": "2",
     "weather_status": "raining",
+    "day1_temp": "2",
+    "day2_temp": "2",
+    "day3_temp": "2",
+    "day4_temp": "2",
+    "day5_temp": "2",
+    "day6_temp": "2",
+    "day7_temp": "2",
+
     "departures_skyttens": [{
             "bus": "809",
             "time": "08:10"
