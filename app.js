@@ -1,10 +1,17 @@
 $(document).ready(function() {
+
     $.get("/traffic-weather-info/data.php", function(data, status) {
         $('#temperature-status').html(Math.round(data.temp));
-        $(".weather-status-container").append(`<p>${data.weather_description}</p>`);
+        $(".weather-status-container").html(`<p>${data.weather_description}</p>`);
+        $('#tempDay1').html(`<p>${Math.round(data.day1_temp)}℃</p>`);
+        $('#tempDay2').html(`<p>${Math.round(data.day2_temp)}℃</p>`);
+        $('#tempDay3').html(`<p>${Math.round(data.day3_temp)}℃</p>`);
+        $('#tempDay4').html(`<p>${Math.round(data.day4_temp)}℃</p>`);
+        $('#tempDay5').html(`<p>${Math.round(data.day5_temp)}℃</p>`);
+        $('#tempDay6').html(`<p>${Math.round(data.day6_temp)}℃</p>`);
+        $('#tempDay7').html(`<p>${Math.round(data.day7_temp)}℃</p>`);
 
         //$('#weather-status').attr("src", "https://openweathermap.org/img/wn/" + data.weather_icon + "@4x.png");
-        $('#tempDay1').append(`<p>${data.day1_temp}</p>`);
 
 
         for (let i = 0; i < data.departures_skyttens.length; i++) {
@@ -16,6 +23,8 @@ $(document).ready(function() {
             $("#BrandbergenCentrum-list").append(`<li><span class="bus-number" >${obj.bus}:&nbsp; &nbsp; &nbsp;</span> <span class="bus-time">${obj.time}</span></li>`);
         }
     });
+
+
     //change background image according to date
     // var date = new Date();
     // var month = date.getMonth();
