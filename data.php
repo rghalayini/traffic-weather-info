@@ -71,14 +71,14 @@ $day5_temp=$jsonData->daily[5]->temp->day;
 $day6_temp=$jsonData->daily[6]->temp->day;
 $day7_temp=$jsonData->daily[7]->temp->day;
 
-//add weather description for each day
-$day1_description = $jsonData->daily[1]->weather[0]->description;
-$day2_description = $jsonData->daily[2]->weather[0]->description;
-$day3_description = $jsonData->daily[3]->weather[0]->description;
-$day4_description = $jsonData->daily[4]->weather[0]->description;
-$day5_description = $jsonData->daily[5]->weather[0]->description;
-$day6_description = $jsonData->daily[6]->weather[0]->description;
-$day7_description = $jsonData->daily[7]->weather[0]->description;
+//add weather description for each day: rain, snow, clouds or clear
+$day1_description = $jsonData->daily[1]->weather[0]->main;
+$day2_description = $jsonData->daily[2]->weather[0]->main;
+$day3_description = $jsonData->daily[3]->weather[0]->main;
+$day4_description = $jsonData->daily[4]->weather[0]->main;
+$day5_description = $jsonData->daily[5]->weather[0]->main;
+$day6_description = $jsonData->daily[6]->weather[0]->main;
+$day7_description = $jsonData->daily[7]->weather[0]->main;
 
 
 

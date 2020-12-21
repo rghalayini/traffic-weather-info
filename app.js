@@ -22,6 +22,27 @@ $(document).ready(function() {
             let obj = data.departures_brandbergen[i];
             $("#BrandbergenCentrum-list").append(`<li><span class="bus-number" >${obj.bus}:&nbsp; &nbsp; &nbsp;</span> <span class="bus-time">${obj.time}</span></li>`);
         }
+
+        //update the weather icon according to weather description: DAILY FORECAST
+
+        var weather_description_array = [data.day1_description, data.day2_description, data.day3_description, data.day4_description, data.day5_description, data.day6_description, data.day7_description]
+
+        //possible_alternatives: "rain", "snow", "clear",  "clouds"
+        for (let i = 0; i < weather_description_array.length; i++) {
+            let day = i + 1;
+
+
+            if (weather_description_array[i] == "Clear") {
+                $(`#icon-day${day}`).append('<ion-icon name="sunny-outline"></ion-icon>');
+            } else if (weather_description_array[i] == "Snow") {
+                $(`#icon-day${day}`).append('<ion-icon name="snow-outline"></ion-icon>');
+            } else if (weather_description_array[i] == "Clouds") {
+                $(`#icon-day${day}`).append('<ion-icon name="cloudy-outline"></ion-icon>');
+            } else {
+                $(`#icon-day${day}`).append('<ion-icon name="rainy-outline"></ion-icon>');
+            };
+        };
+
     });
 
 
@@ -99,6 +120,4 @@ $(document).ready(function() {
     $('#day5-forecast').text(WeekDays[day5.getDay()]);
     $('#day6-forecast').text(WeekDays[day6.getDay()]);
     $('#day7-forecast').text(WeekDays[day7.getDay()]);
-
-
 });
