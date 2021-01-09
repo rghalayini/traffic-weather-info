@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    $.get("/traffic-weather-info/data.php", function(data, status) {
+    //when testing locally, replace below with "/traffic-weather-info/data.php"
+    $.get("/data.php", function(data, status) {
         $('#temperature-status').html(Math.round(data.temp));
         $(".weather-status-container").html(`<p>${data.weather_description}</p>`);
         $('#tempDay1').html(`<p>${Math.round(data.day1_temp)}℃</p>`);
