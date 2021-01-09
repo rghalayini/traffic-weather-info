@@ -1,5 +1,10 @@
 # Traffic Weather Information
 
+***This is a hobby project that is developed during free time. It is still under development and is not fully done***
+
+Brandbergen Info is a simple website to show the weather status and the next departures times for two bus stations in Brandbergen, Haninge. It shows the weather temperature and status now, and show the expected temperature and status for the following 7 days. 
+All information are taken from OpenWeatherMap.org and Trafiklab.se API's.
+
 ## Setup for local developing
 
 ```
